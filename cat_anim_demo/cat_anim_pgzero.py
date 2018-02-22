@@ -24,10 +24,6 @@ cat = None
 cat_left = 0
 
 def fps_tick():
-	'''
-	This function is called 20 x a second
-	'''
-    # print("TICK {}".format(time.monotonic()))
     global cat_idx, jump_idx, jumping
     if jumping:
         jump_idx += 1 
@@ -41,11 +37,6 @@ def fps_tick():
 
 
 def update():
-	'''
-	Update the cat sprite to the correct state based on whether
-	it is moving, standing (idle) or jumping.  Once a jump starts
-	it will ignore other input until the jump completes
-	'''
     global cat, facing_right, cat_left, jump_idx, jumping, moving
     
 	# controls how many pixels the cat moves with each update
